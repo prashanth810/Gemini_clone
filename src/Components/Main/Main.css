@@ -1,0 +1,250 @@
+.light-theme {
+    --primary-bg-color: white;
+    --secondary-color: #fff;
+    --nav-color: #585858;
+    --main-content: #c4c7c5;
+    --cards-bg-color: #f0f4f9;
+    --card-color: #000;
+    --card-bg-hover-color: #dfe4ea;
+    --search-bg-color: #f0f4f9;
+    --search-color: #1e1f20;
+}
+
+.dark-theme {
+    --primary-bg-color: black;
+    --secondary-color: #000;
+    --nav-color: #fff;
+    --main-content: #444746;
+    --cards-bg-color: #1e1f20;
+    --card-color: #e3e3e3;
+    --card-bg-hover-color: #333537;
+    --search-bg-color: #1e1f20;
+    --search-color: #fff;
+}
+
+
+.main {
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+    background-color: var(--secondary-color);
+
+}
+
+.main .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: #585858;
+}
+
+.main .nav img {
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.main .nav h4 {
+    color: var(--card-color);
+}
+
+.main-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.main .greet {
+    margin: 50px 0px;
+    font-size: 56px;
+    color: var(--main-content);
+    font-weight: 500;
+    padding: 20px;
+}
+
+.main .greet span {
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.main .card {
+    height: 200px;
+    padding: 15px;
+    background-color: var(--cards-bg-color);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.main .card img {
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.main .card p {
+    color: var(--card-color);
+    font-size: 17px;
+}
+
+.main .card:hover {
+    background-color: var(--card-bg-hover-color);
+}
+
+.main-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: var(--search-bg-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.search-box img {
+    width: 25px;
+    cursor: pointer;
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 8px;
+    color: var(--search-color);
+}
+
+.search-box div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main .bottom-info {
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+    color: var(--search-color);
+}
+
+.result {
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+.result::-webkit-scrollbar {
+    display: none;
+}
+
+.result-title {
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.result img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.result-data {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loader hr {
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #9ed7ff, #ffff, #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: anime 3s infinite linear;
+}
+
+
+@keyframes anime {
+    0% {
+        background-position: -800px 0px;
+    }
+
+    100% {
+        background-position: 800px 0px;
+    }
+}
+
+.result-data p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+@media screen and (min-width:320px) and (max-width:768px) {
+    .main-bottom input {
+        flex: none;
+        width: 150px;
+    }
+
+    .main-bottom .img {
+        width: 20px;
+    }
+
+    .search-box {
+        padding: 5px 10px;
+    }
+
+    .search-box div {
+        gap: 5px;
+    }
+
+    .main .bottom-info {
+        margin: 20px 0px 10px 0px;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 425px) and (min-width: 320px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-bottom {
+        margin: -34px auto;
+    }
+}

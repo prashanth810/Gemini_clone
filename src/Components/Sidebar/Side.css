@@ -1,0 +1,96 @@
+.light-theme {
+    --primary-bg-color: white;
+    --secondary-color: #fff;
+    --nav-color: #585858;
+    --main-content: #c4c7c5;
+    --cards-bg-color: #f0f4f9;
+    --card-color: #000;
+    --card-bg-hover-color: #dfe4ea;
+}
+
+.dark-theme {
+    --primary-bg-color: black;
+    --secondary-color: #000;
+    --nav-color: #fff;
+    --main-content: #444746;
+    --cards-bg-color: #1e1f20;
+    --card-color: #e3e3e3;
+    --card-bg-hover-color: #333537;
+}
+
+
+.sidebar {
+    min-height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--cards-bg-color);
+    padding: 20px 15px;
+}
+
+.sidebar img {
+    width: 18px;
+}
+
+.sidebar .menu {
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    color: var(--card-color);
+}
+
+.sidebar .new_chat {
+    margin-top: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 2px 15px;
+    background-color: #e6eaf1;
+    border-radius: 50px;
+    border: 1px dashed;
+    font-size: 14px;
+    color: gray;
+    cursor: pointer;
+}
+
+.sidebar .new_chat p {
+    padding-top: 14px;
+}
+
+.sidebar .recent {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1.5s;
+}
+
+.sidebar .recent-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+}
+
+.sidebar .recent-entry {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 50px;
+    color: var(--nav-color);
+    cursor: pointer;
+}
+
+.sidebar .recent-entry:hover {
+    background-color: var(--card-bg-hover-color);
+}
+
+.sidebar .bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .bottom-iyem {
+    padding-right: 10px;
+    cursor: pointer;
+}
